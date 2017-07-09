@@ -1,0 +1,39 @@
+{% load panels %}
+<div class="col-md-12">
+  <div class="panel panel-active">
+    <div class="panel-heading text-center">
+      <h3>
+          Nhận bệnh ngày
+        [[ episode.date_of_admission | shortDate]]<span ng-show="episode.discharge_date"> - [[ episode.discharge_date | shortDate ]]</span>
+      </h3>
+    </div>
+    <div class="panel-body">
+      <center>
+          <button
+              ng-if="episode.discharge_date"
+              ng-hide="profile.readonly"
+              ng-click="dischargeEpisode(episode)"
+              class="btn btn-secondary btn-lg"
+              disabled
+              <i class="fa fa-home"></i>
+              Đã trả bệnh
+          </button>
+          <button
+              ng-if="!episode.discharge_date"
+              ng-hide="profile.readonly"
+              ng-click="dischargeEpisode(episode)"
+              class="btn btn-primary btn-lg">
+              <i class="fa fa-home"></i>
+              Trả bệnh
+          </button>
+      </center>
+    </div>
+  </div>
+</div>
+<div class="col-md-6"> <!-- Detail panels col 1 -->
+  {% record_panel models.Allergies noentries="No known allergies"%}
+</div>                 <!-- Ends Detail panels col 1 -->
+<div class="col-md-6"> <!-- Detail panels col 2 -->
+  {% record_panel models.Diagnosis %}
+  {% record_panel models.Treatment %}
+</div>                 <!-- Ends Detail panels col 2 -->

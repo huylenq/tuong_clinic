@@ -1,0 +1,3 @@
+recursive-include tuong_clinic/static *
+recursive-include tuong_clinic/assets *
+recursive-include tuong_clinic/templates *

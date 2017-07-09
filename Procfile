@@ -1,0 +1,1 @@
+web: gunicorn tuong_clinic.wsgi
