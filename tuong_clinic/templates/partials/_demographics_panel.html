@@ -9,19 +9,26 @@
   <div class="panel-body">
     <div class="row">
       <div class="col-md-4">
-        <b>Name</b>
+        <b>Mã số</b>
       </div>
       <div class="col-md-8">
-        [[ patient.demographics[0].first_name ]]
-        [[ patient.demographics[0].surname ]]
+        <code>[[ patient.demographics[0].hospital_number ]]</code>
       </div>
     </div>
     <div class="row">
       <div class="col-md-4">
-        <b>Mã số hồ sơ</b>
+        <b>Tên</b>
       </div>
       <div class="col-md-8">
-        [[ patient.demographics[0].hospital_number ]]
+        [[ patient.demographics[0].name ]]
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <b>SĐT</b>
+      </div>
+      <div class="col-md-8">
+        [[ patient.demographics[0].phone_number ]]
       </div>
     </div>
     <div class="row">
@@ -34,26 +41,10 @@
     </div>
     <div class="row">
       <div class="col-md-4">
-        <b>Sex</b>
+        <b>Giới tính</b>
       </div>
       <div class="col-md-8">
         [[ patient.demographics[0].sex ]]
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-        <b>Born</b>
-      </div>
-      <div class="col-md-8">
-        [[ patient.demographics[0].birth_place ]]
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-        <b>Ethnicity</b>
-      </div>
-      <div class="col-md-8">
-        [[ patient.demographics[0].ethnicity ]]
       </div>
     </div>
   </div>
