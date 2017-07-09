@@ -28,19 +28,6 @@ class SimplifiedDemographics(models.PatientSubrecord):
     class Meta:
         abstract = True
 
-class Notes(models.EpisodeSubrecord):
-    _sort = 'description'
-    _icon = 'fa fa-pencil-square-o'
-    _title = "Ghi Chú"
-
-    HELP_START = "The date on which the patient began receiving this treatment."
-
-    description = CharField(max_length=10000, blank=True, verbose_name="Mô tả")
-
-    class Meta:
-        abstract = True
-
-
 """
 Core Opal models - these inherit from the abstract data models in
 opal.models but can be customised here with extra / altered fields.
@@ -59,6 +46,7 @@ class Treatment(models.Treatment):
 class Investigation(models.Investigation): pass
 class SymptomComplex(models.SymptomComplex): pass
 class PatientConsultation(models.PatientConsultation): pass
+class Notes(models.Notes): pass
 
 # we commonly need a referral route, ie how the patient
 # came to the service, but not always.
