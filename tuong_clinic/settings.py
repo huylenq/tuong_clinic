@@ -250,7 +250,7 @@ DEFAULT_DOMAIN = 'http://tuong_clinic.com/'
 
 # Begins OPAL Settings you should edit !
 
-OPAL_BRAND_NAME = 'Phòng khám chị Tưởng'
+OPAL_BRAND_NAME = 'Nha Khoa Sao Mai'
 VERSION_NUMBER  = '0.0.1'
 
 REST_FRAMEWORK = {
