@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 tuong_clinic models.
 """
