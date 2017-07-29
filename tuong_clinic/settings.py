@@ -162,6 +162,7 @@ INSTALLED_APPS = (
     'opal.core.search',
     'tuong_clinic',
     'django.contrib.admin',
+    'django_extensions'
 )
 
 # A sample logging configuration. The only tangible logging
